@@ -643,7 +643,7 @@ public class DappBrowserFragment extends Fragment implements OnSignTransactionLi
         if (fragment != null && fragment.isVisible() && !fragment.isDetached()) {
             getChildFragmentManager().beginTransaction()
                     .remove(fragment)
-                    .commit();
+                    .commitAllowingStateLoss();
         }
     }
 
